@@ -1,8 +1,6 @@
 <template>
   <footer class="app-footer" role="contentinfo">
-    <p class="app-footer__text">
-      &copy; {{ currentYear }} To-Do Manager &mdash; Code2Work
-    </p>
+    <p class="app-footer__text">&copy; {{ currentYear }} To-Do Manager &mdash; Code2Work</p>
   </footer>
 </template>
 
