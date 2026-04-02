@@ -1,54 +1,60 @@
-# to-do-manager
+# To-Do Manager
 
-This template should help get you started developing with Vue 3 in Vite.
+## Description
 
-## Recommended IDE Setup
+To-Do Manager is a lightweight task management web application built as a prototype for **Code2Work**, a startup dedicated to helping work-study students organise their daily tasks.
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+The app lets you create, update, filter, and delete tasks entirely in the browser — no server, no database. All data is persisted in `localStorage` so your tasks survive page refreshes.
 
-## Recommended Browser Setup
+## Technologies Used
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+| Tool | Purpose |
+|------|---------|
+| [Vue 3](https://vuejs.org/) | UI framework (Composition API + `<script setup>`) |
+| [TypeScript](https://www.typescriptlang.org/) | Static typing |
+| [Vite](https://vitejs.dev/) | Build tool & dev server |
+| [ESLint](https://eslint.org/) | Code linting |
+| [Prettier](https://prettier.io/) | Code formatting |
+| [Vitest](https://vitest.dev/) | Unit testing |
+| localStorage | Client-side data persistence |
 
-## Type Support for `.vue` Imports in TS
+## Project Initialization
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
+Make sure you have **Node.js ≥ 20** installed, then run:
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+## Running the Project
+
+Start the development server:
 
 ```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+The app will be available at `http://localhost:5173` (or the next available port).
+
+Other useful commands:
 
 ```sh
-npm run build
+npm run build        # Type-check + production build
+npm run test:unit    # Run unit tests with Vitest
+npm run lint         # Lint and auto-fix with ESLint + oxlint
+npm run format       # Format source files with Prettier
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+## Features
 
-```sh
-npm run test:unit
-```
+- **Create** a task via a validated form (empty titles are rejected with an error message)
+- **Delete** a task
+- **Change** the status of a task: `to do` → `in progress` → `done`
+- **Edit** the title of a task inline
+- **Filter** tasks by status (all / to do / in progress / done)
+- **Persist** tasks in `localStorage` — data survives page refreshes
+- Accessible UI with ARIA attributes
 
-### Lint with [ESLint](https://eslint.org/)
+## Author
 
-```sh
-npm run lint
-```
+Antoine Caps
